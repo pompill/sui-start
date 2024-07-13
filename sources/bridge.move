@@ -41,8 +41,9 @@ module bridge::bridge {
     }
 
     //ask admin to get pool.coin
-    public fun transferCoin(_:&mut BridgeCap, pool : &mut Pool,amount: u64,ctx: &mut TxContext): Coin<SUI>{
-        coin::take(&mut pool.coin_sui, amount, ctx)
+    public entry fun transferCoin(_ : &mut BridgeCap, pool : &mut Pool,amount: u64, receiveAddr: address, ctx: &mut TxContext){
+        let coin = coin::take(&mut pool.coin_sui, amount, ctx);
+        transfer::public_transfer(coin, receiveAddr)
     }
 
     public entry fun deposit(inVec : vector<Coin<SUI>>, pool : &mut Pool, amount_x: u64, ctx: &mut TxContext){
