@@ -1,0 +1,37 @@
+== Logs ==
+  toSuiBridge deployed to: 0x5FbDB2315678afecb367f032d93F642f64180aa3
+
+## Setting up 1 EVM.
+
+==========================
+
+Chain 31337
+
+Estimated gas price: 2 gwei
+
+Estimated total gas used for script: 374692
+
+Estimated amount required: 0.000749384 ETH
+
+==========================
+##
+Sending transactions [0 - 0].
+⠁ [00:00:00] [################################################################################################################################################################################] 1/1 txes (0.0s)##
+Waiting for receipts.
+⠉ [00:00:00] [############################################################################################################################################################################] 1/1 receipts (0.0s)
+##### anvil-hardhat
+✅  [Success]Hash: 0x5df1829fe9ece799526ffa99336c76fa410bcbb1aa39f54d30a1ae77853992c9
+Contract Address: 0x5FbDB2315678afecb367f032d93F642f64180aa3
+Block: 1
+Paid: 0.000288297 ETH (288297 gas * 1 gwei)
+
+
+
+==========================
+
+ONCHAIN EXECUTION COMPLETE & SUCCESSFUL.
+Total Paid: 0.000288297 ETH (288297 gas * avg 1 gwei)
+
+Transactions saved to: /Users/rayer/Documents/Code/Ethereum/Sui_ETH_CrossChainBridge/broadcast/toSuiBridge.s.sol/31337/run-latest.json
+
+Sensitive values saved to: /Users/rayer/Documents/Code/Ethereum/Sui_ETH_CrossChainBridge/cache/toSuiBridge.s.sol/31337/run-latest.json
