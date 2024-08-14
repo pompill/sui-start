@@ -1,6 +1,4 @@
 module bridge::bridge {
-
-    // use std::string::{Self,String};
     use sui::clock::{Self, Clock};
     use sui::object::{Self, UID};
     use sui::transfer::{Self};
@@ -27,6 +25,12 @@ module bridge::bridge {
         orderId: u64,
         amount: u64,
         receiveAddr: address,
+        timeMs: u64
+    }
+
+    struct WithdrawEvent has copy, drop{
+        amount: u64,
+        toAddress: address,
         timeMs: u64
     }
 
@@ -95,5 +99,16 @@ module bridge::bridge {
         let orderId = (unix << 6) + random;
         return orderId
     }
+
+    public entry fun withdraw(_ : &mut BridgeCap, pool : &mut Pool, amount: u64, to: address, clock: &Clock, ctx: &mut TxContext){
+        let c = coin::take(&mut pool.coin_sui, amount, ctx);
+        transfer::public_transfer(c, to);
+        event::emit(WithdrawEvent{
+            amount,
+            toAddress: to,
+            timeMs: clock::timestamp_ms(clock)
+        });
+    }
+
 }
 
