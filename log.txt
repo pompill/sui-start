@@ -1,0 +1,64 @@
+Compiling 2 files with Solc 0.8.20
+Solc 0.8.20 finished in 1.05s
+Compiler run successful!
+Traces:
+  [366494] DeployToSuiBridge::run()
+    ├─ [0] VM::startBroadcast()
+    │   └─ ← [Return] 
+    ├─ [327542] → new toSuiBridge@0xf786f7A223dE30e6ED38689090AB0624f81C54e2
+    │   ├─ emit OwnershipTransferred(previousOwner: 0x0000000000000000000000000000000000000000, newOwner: 0xceD0324969581Fe73b5c867d1aAC8E2e33d0946E)
+    │   └─ ← [Return] 1516 bytes of code
+    ├─ [0] console::log("toSuiBridge deployed to:", toSuiBridge: [0xf786f7A223dE30e6ED38689090AB0624f81C54e2]) [staticcall]
+    │   └─ ← [Stop] 
+    ├─ [0] VM::stopBroadcast()
+    │   └─ ← [Return] 
+    └─ ← [Stop] 
+
+
+Script ran successfully.
+
+== Logs ==
+  toSuiBridge deployed to: 0xf786f7A223dE30e6ED38689090AB0624f81C54e2
+
+## Setting up 1 EVM.
+==========================
+Simulated On-chain Traces:
+
+  [327542] → new toSuiBridge@0xf786f7A223dE30e6ED38689090AB0624f81C54e2
+    ├─ emit OwnershipTransferred(previousOwner: 0x0000000000000000000000000000000000000000, newOwner: 0xceD0324969581Fe73b5c867d1aAC8E2e33d0946E)
+    └─ ← [Return] 1516 bytes of code
+
+
+==========================
+
+Chain 11155111
+
+Estimated gas price: 21.875246912 gwei
+
+Estimated total gas used for script: 528832
+
+Estimated amount required: 0.011568330574966784 ETH
+
+==========================
+##
+Sending transactions [0 - 0].
+##
+Waiting for receipts.
+
+##### sepolia
+✅  [Success]Hash: 0xfe12705788c392d3be568d5bf0cc9aef6d74e5f8513359cd18969cd9a1908228
+Contract Address: 0xf786f7A223dE30e6ED38689090AB0624f81C54e2
+Block: 6511261
+Paid: 0.004540796757284856 ETH (406902 gas * 11.159435828 gwei)
+
+
+
+==========================
+
+ONCHAIN EXECUTION COMPLETE & SUCCESSFUL.
+Total Paid: 0.004540796757284856 ETH (406902 gas * avg 11.159435828 gwei)
+
+Transactions saved to: /Users/rayer/Documents/Code/Ethereum/Sui_ETH_CrossChainBridge/broadcast/DeployToSuiBridge.s.sol/11155111/run-latest.json
+
+Sensitive values saved to: /Users/rayer/Documents/Code/Ethereum/Sui_ETH_CrossChainBridge/cache/DeployToSuiBridge.s.sol/11155111/run-latest.json
+

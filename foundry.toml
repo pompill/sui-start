@@ -2,7 +2,9 @@
 src = "src"
 out = "out"
 libs = ["lib"]
-rpc_url = "http://127.0.0.1:8545"
 solc = '0.8.20'
+# ETHERSCAN_API_KEY="DR6UC1TY98DNMCNZIE5KSQ4Y3CNPB5EDQR"
+# CHAIN="11155111"
+# ETH_RPC_URL="https://eth-sepolia.g.alchemy.com/v2/cV-tG7B1AKHF1z5d4NWBCXMmwFqprOEI"
 
 # See more config options https://github.com/foundry-rs/foundry/blob/master/crates/config/README.md#all-options
